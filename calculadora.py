@@ -35,3 +35,11 @@ def conocer_influyente(dic,values):
             max = points
     return most_influential, max
 
+def calcular_goals_average(dic,matches_played):
+    """goals_average recorre un diccionario contando los goles totales y esa cantidad la divide por la cantidad de partidados jugados, obteniendo el promedio de gol por partido."""
+    goals = 0
+    for name in dic:
+        goals += dic[name][0]
+    if matches_played == 0:
+        return 0
+    else: return goals/matches_played
